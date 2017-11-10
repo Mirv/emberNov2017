@@ -23,6 +23,15 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+  
+  ENV.contentSecurityPolicy = {
+      'script-src':  "*",
+      'font-src':    "*",
+      'connect-src': "'self' wss://ember-base-mirv.c9users.io/",
+      'style-src':   "'self' https://ember-base-mirv.c9users.io/",
+      'object-src':  "*",
+      'img-src':     "*"
+  };
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
